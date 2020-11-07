@@ -1,16 +1,22 @@
 #hier kommt das backend hin
 import mysql.connector
-
+from dotenv import load_dotenv
+import os
+load_dotenv()
 
 mydb = mysql.connector.connect(
-        host="0.tcp.ngrok.io",
-        port=19398,
-        user="crowdtidying",
-        password="helloWorld!2",
-        database="crowdtidying",
+        host = os.getenv('DATABASEHOST'),
+        port = os.getenv('DATABASEPORT'),
+        user = os.getenv('DATABASEUSER'),
+        password = os.getenv('DATABASEPASSWORD'),
+        database = os.getenv('DATABASE'),
     )
 
 mycursor = mydb.cursor()
+
+
+#mycursor.execute('INSERT INTO teams VALUES(NULL,x,y,NULL)')
+
 
 mycursor.execute('SELECT* FROM teams')
 myresults = mycursor.fetchall()

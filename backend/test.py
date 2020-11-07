@@ -1,18 +1,22 @@
 from flask import Flask
 import mysql.connector
+from dotenv import load_dotenv
+import os
 
 
 app = Flask('Hello_World_Test')  # name for the Flask app (refer to output)
 # running the server
 
 
+load_dotenv()
+
 mydb = mysql.connector.connect(
-    host="0.tcp.ngrok.io",
-    port=19398,
-    user="crowdtidying",
-    password="helloWorld!2",
-    database="crowdtidying",
-)
+        host = os.getenv('DATABASEHOST'),
+        port = os.getenv('DATABASEPORT'),
+        user = os.getenv('DATABASEUSER'),
+        password = os.getenv('DATABASEPASSWORD'),
+        database = os.getenv('DATABASE'),
+    )
 
 
 @app.route('/', methods=['GET', 'POST', 'PUT'])  # decorator
