@@ -29,4 +29,12 @@ function zeigePosition(position) {
             var popup = L.popup()
             .setLatLng([position.coords.latitude, position.coords.longitude])
             .setContent("Hier bist du :)")
-            .openOn(mymap); }
+            .openOn(mymap); 
+            var circle = L.circle([position.coords.latitude, position.coords.longitude], {
+                color: 'red',
+                fillColor: '#f03',
+                fillOpacity: 0.5,
+                radius: 500
+            }).addTo(mymap);
+
+        }
