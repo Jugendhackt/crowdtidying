@@ -5,7 +5,7 @@ var tid = setInterval(function () {
 
 }, 100)
 
-var dreckigeOrte =[[49.410136, 8.692862, "Müllsammelaktion am 09.11. von 10-18 Uhr"], [49.412439, 8.688185, "Müllsammelaktion am 15.11. von 13-15 Uhr"], [49.404659, 8.676074, "Müllsammelaktion am 14.11. von 10-15 Uhr"]];
+var dreckigeOrte =[[49.410136, 8.692862, "Müllsammelaktion am 09.11. von 10-18 Uhr"], [49.412439, 8.688185, "Müllsammelaktion am 15.11. von 13-15 Uhr"], [49.404659, 8.676074, "Müllsammelaktion am 14.11. von 10-15 Uhr"],[49.419099, 8.670251, "Müllsammelaktion 15.11. von 16-18Uhr"]];
 
 function ermittlePosition() {
     if (navigator.geolocation) {
