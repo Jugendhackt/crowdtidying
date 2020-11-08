@@ -33,4 +33,16 @@ def home():
     # returning a response
 
 
+
+
+#@app.route('/event.js',methods = ['GET'])
+#def eventJS():
+    #mycursor = mydb.cursor()
+    #x = 'var dreckigeOrte = ['
+    #mycursor.execute('SELECT * FROM collection_action')
+    #myresults = mycursor.fetchall()
+    #for i in myresults:
+        #x += '[' + i[0] + i[1] + '"' i[2]'"]'
+
+
 app.run(debug=True)  # to allow for debugging and auto-reload
